@@ -1,36 +1,27 @@
+use std::fs;
 use actix_web::HttpResponse;
 use rusqlite::{Connection, params, Result};
 
+
+const DATABASE: Connection = Connection::open("data/dev_database.db")?;
+
+fn setup() -> Result<()>{
+    let sql_script = fs::read_to_string("data/setup.sql")
+        .expect("Unable to read the SQL script file");
+
+    DATABASE.execute_batch(&sql_script)?;
+    Ok(())
+}
+
+
+
 pub fn main() -> Result<()> {
 
-    let conn = Connection::open("data/dev_database.db")?;
-
-    // let conn = match Connection::open("my_database.db") {
-    //     Ok(conn) => conn,
-    //     Err(e) => {
-    //         eprintln!("Error opening database: {}", e);
-    //         return HttpResponse::InternalServerError().finish();
-    //     }
-    // };
+    setup()?;
 
 
 
-
-    conn.execute(
-        "CREATE TABLE IF NOT EXISTS user (
-            id INTEGER PRIMARY KEY,
-            name TEXT NOT NULL,
-            email TEXT NOT NULL
-        )",
-        [],
-    )?;
-
-    conn.execute(
-        "INSERT INTO user (name, email) VALUES (?1, ?2)",
-        params!["Alice", "alice@example.com"],
-    )?;
-
-    let mut stmt = conn.prepare("SELECT id, name, email FROM user")?;
+    let mut stmt = DATABASE.prepare("SELECT id, name, email FROM user")?;
     let user_iter = stmt.query_map([], |row| {
         Ok(User {
             id: row.get(0)?,
