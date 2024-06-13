@@ -1,11 +1,10 @@
 use std::fs;
-use actix_web::HttpResponse;
 use rusqlite::{Connection, params, Result};
 
 
 const DATABASE: Connection = Connection::open("data/dev_database.db")?;
 
-fn setup() -> Result<()>{
+fn setup() -> Result<()> {
     let sql_script = fs::read_to_string("data/setup.sql")
         .expect("Unable to read the SQL script file");
 
@@ -14,11 +13,8 @@ fn setup() -> Result<()>{
 }
 
 
-
 pub fn main() -> Result<()> {
-
     setup()?;
-
 
 
     let mut stmt = DATABASE.prepare("SELECT id, name, email FROM user")?;
@@ -35,7 +31,6 @@ pub fn main() -> Result<()> {
     }
 
     Ok(())
-
 }
 
 #[derive(Debug)]
