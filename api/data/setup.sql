@@ -7,8 +7,8 @@ CREATE TABLE IF NOT EXISTS users
     uuid        INTEGER PRIMARY KEY,
     name        TEXT    NOT NULL,
     email       TEXT    NOT NULL,
-    wallet_uuid TEXT    NOT NULL UNIQUE,
-    deleted     INTEGER NULL -- if deleted then set to 1 else NULL
+    wallet_uuid TEXT    NOT NULL UNIQUE, -- blockchain wallet example 1Lbcfr7sAHTD9CgdQo3HTMTkV8LK4ZnX71
+    deleted     INTEGER NULL             -- if deleted then set to 1 else NULL
 );
 
 
