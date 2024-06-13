@@ -9,8 +9,8 @@ VALUES (1, 'Alice', 'alice@example.com', '1Lbcfr7sAHTD9CgdQo3HTMTkV8LK4ZnX71', N
 
 
 
-INSERT INTO transactions (uuid, timestamp, cost, sellers_wallet_uuid, customer_wallet_uuid, product_uuid,
-                          delivery_option, longitude, latitude)
+INSERT OR IGNORE INTO transactions (uuid, timestamp, cost, sellers_wallet_uuid, customer_wallet_uuid, product_uuid,
+                                    delivery_option, longitude, latitude)
 VALUES (1, 1643155200, 1500, '1Lbcfr7sAHTD9CgdQo3HTMTkV8LK4ZnX71', '5EoV2r5iN8mFkXyF1hR8T4bZ4X2Uj9iKtD', 1, 'Standard',
         -73.935242, 40.730610),
        (2, 1643068800, 500, '2PwX6KuUC1w6FkTkZ7EsBfT6LpJHn43aC8', '3NzZifS4T6yC24ERpYzMd6kF3N5GfRRW6Y', 2, 'Express',
@@ -23,7 +23,7 @@ VALUES (1, 1643155200, 1500, '1Lbcfr7sAHTD9CgdQo3HTMTkV8LK4ZnX71', '5EoV2r5iN8mF
         -118.243683, 34.052235);
 
 
-INSERT INTO products (uuid, cost, sellers_uuid, description, name, deleted, image)
+INSERT OR IGNORE INTO products (uuid, cost, sellers_uuid, description, name, deleted, image)
 VALUES (1, 2000, '3NzZifS4T6yC24ERpYzMd6kF3N5GfRRW6Y', 'High-quality laptop for professional use', 'Laptop', NULL,
         NULL),
        (2, 500, '2PwX6KuUC1w6FkTkZ7EsBfT6LpJHn43aC8', 'Stylish headphones with noise cancellation', 'Headphones', NULL,
