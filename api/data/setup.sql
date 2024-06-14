@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS products
     name         TEXT    NOT NULL,
     deleted      INTEGER NULL,
     image        BLOB    NULL, --base64 image of product
-    FOREIGN KEY (sellers_uuid) REFERENCES users (uuid) ON DELETE CASCADE
+    FOREIGN KEY (sellers_uuid) REFERENCES users (id) ON DELETE CASCADE
 );
 
 

@@ -1,6 +1,6 @@
 BEGIN;
 
-INSERT OR IGNORE INTO users (uuid, name, email, wallet_uuid, deleted)
+INSERT OR IGNORE INTO users (id, name, email, wallet_uuid, deleted)
 VALUES (1, 'Alice', 'alice@example.com', '1Lbcfr7sAHTD9CgdQo3HTMTkV8LK4ZnX71', 0),
        (2, 'Bob', 'bob@example.com', '2PwX6KuUC1w6FkTkZ7EsBfT6LpJHn43aC8', 0),
        (3, 'Charlie', 'charlie@example.com', '3NzZifS4T6yC24ERpYzMd6kF3N5GfRRW6Y', 0),
