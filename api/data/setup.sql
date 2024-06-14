@@ -4,7 +4,7 @@ BEGIN;
 
 CREATE TABLE IF NOT EXISTS users
 (
-    uuid        INTEGER PRIMARY KEY,
+    id        INTEGER PRIMARY KEY,
     name        TEXT    NOT NULL,
     email       TEXT    NOT NULL,
     wallet_uuid TEXT    NOT NULL UNIQUE, -- blockchain wallet example 1Lbcfr7sAHTD9CgdQo3HTMTkV8LK4ZnX71
@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS users
 
 CREATE TABLE IF NOT EXISTS transactions
 (
-    uuid                 INTEGER PRIMARY KEY,
+    id                 INTEGER PRIMARY KEY,
     timestamp            INTEGER NOT NULL,
     cost                 INTEGER NOT NULL,
     sellers_wallet_uuid  TEXT    NOT NULL,
@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS transactions
 
 CREATE TABLE IF NOT EXISTS products
 (
-    uuid         INTEGER PRIMARY KEY,
+    id         INTEGER PRIMARY KEY,
     cost         INTEGER NOT NULL,
     sellers_uuid TEXT    NOT NULL,
     description  TEXT    NOT NULL,
