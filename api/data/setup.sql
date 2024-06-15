@@ -1,5 +1,7 @@
 PRAGMA foreign_keys = ON;
 
+-- can use VARCHAR(50) but SQLite doesn't encore this, so a trigger is required
+
 BEGIN;
 
 CREATE TABLE IF NOT EXISTS users
