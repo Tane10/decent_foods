@@ -1,0 +1,14 @@
+# ape-config.yaml
+project:
+  name: my_project
+  version: 0.1.0
+  description: "Ape project for SimpleStorage contract"
+
+solidity:
+  version: "0.8.14"
+
+networks:
+  development:
+    default: local
+    local:
+      uri: "http://127.0.0.1:8545"
