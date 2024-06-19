@@ -23,7 +23,7 @@ VALUES (1, 1643155200, 1500, '1Lbcfr7sAHTD9CgdQo3HTMTkV8LK4ZnX71', '5EoV2r5iN8mF
         -118.243683, 34.052235);
 
 
-INSERT OR IGNORE INTO products (id, cost, sellers_uuid, description, name, deleted, image)
+INSERT OR IGNORE INTO products (id, cost, sellers_uuid, description, title, deleted, image_src)
 VALUES (1, 2000, '3NzZifS4T6yC24ERpYzMd6kF3N5GfRRW6Y', 'High-quality laptop for professional use', 'Laptop', NULL,
         NULL),
        (2, 500, '2PwX6KuUC1w6FkTkZ7EsBfT6LpJHn43aC8', 'Stylish headphones with noise cancellation', 'Headphones', NULL,

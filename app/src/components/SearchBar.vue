@@ -2,9 +2,10 @@
 export default {
   name: 'SearchBar'
 };
+</script>
 
-</script><template>
-  <div class="input-group mb-3">
+<template>
+  <div class="input-group mb-3 ma">
     <input type="text" class="form-control" placeholder="Search">
     <button class="btn btn-primary">Search</button>
   </div>

@@ -6,13 +6,13 @@ export default {
 </script>
 
 <template>
-  <div class="col-md-4">
+  <div class="col-md-3">
     <div class="card">
       <img :src="imageSrc" class="card-img-top" alt="Card image">
       <div class="card-body">
         <h5 class="card-title">{{ title }}</h5>
         <p class="card-text">{{ description }}</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <a href="#" class="btn btn-primary">Details</a>
       </div>
     </div>
   </div>

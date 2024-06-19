@@ -6,7 +6,7 @@ BEGIN;
 
 CREATE TABLE IF NOT EXISTS users
 (
-    id        INTEGER PRIMARY KEY,
+    id          INTEGER PRIMARY KEY,
     name        TEXT    NOT NULL,
     email       TEXT    NOT NULL,
     wallet_uuid TEXT    NOT NULL UNIQUE, -- blockchain wallet example 1Lbcfr7sAHTD9CgdQo3HTMTkV8LK4ZnX71
@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS users
 
 CREATE TABLE IF NOT EXISTS transactions
 (
-    id                 INTEGER PRIMARY KEY,
+    id                   INTEGER PRIMARY KEY,
     timestamp            INTEGER NOT NULL,
     cost                 INTEGER NOT NULL,
     sellers_wallet_uuid  TEXT    NOT NULL,
@@ -29,13 +29,13 @@ CREATE TABLE IF NOT EXISTS transactions
 
 CREATE TABLE IF NOT EXISTS products
 (
-    id         INTEGER PRIMARY KEY,
+    id           INTEGER PRIMARY KEY,
     cost         INTEGER NOT NULL,
     sellers_uuid TEXT    NOT NULL,
     description  TEXT    NOT NULL,
-    name         TEXT    NOT NULL,
+    title        TEXT    NOT NULL,
     deleted      INTEGER NULL,
-    image        BLOB    NULL, --base64 image of product
+    image_src    TEXT    NULL, --base64 image of product
     FOREIGN KEY (sellers_uuid) REFERENCES users (id) ON DELETE CASCADE
 );
 
