@@ -1,12 +1,12 @@
 <script>
-import Navbar from './components/Navbar.vue';
-import SearchBar from './components/SearchBar.vue';
-import UserProfile from './components/UserProfile.vue';
-import CardComponent from './components/CardComponent.vue';
+import Navbar from '@/components/Navbar.vue';
+import SearchBar from '@/components/SearchBar.vue';
+import UserProfile from '@/components/UserProfile.vue';
+import CardComponent from '@/components/CardComponent.vue';
 import HeaderComponent from "@/components/HeaderComponent.vue";
 
 export default {
-  name: 'App',
+  name: 'HomeView',
   components: {
     HeaderComponent,
     Navbar,
@@ -70,16 +70,26 @@ export default {
 </script>
 
 <template>
+  <div class="container-fluid max-width">
+    <p>
+      <strong>Current route path:</strong> {{ $route.fullPath }}
+    </p>
+    <header-component/>
+    <navbar></navbar>
 
-<!--  <nav>-->
-<!--    <RouterLink to="/">Go to Home</RouterLink>-->
-<!--    <RouterLink to="/about">Go to About</RouterLink>-->
-<!--  </nav>-->
-  <main>
-    <RouterView />
-  </main>
-
+    <div class="row">
+      <card-component
+          v-for="card in cards"
+          :key="card.id"
+          :image-src="card.imageSrc"
+          :title="card.title"
+          :description="card.description"
+      ></card-component>
+    </div>
+  </div>
 </template>
+
+
 
 <style scoped>
 /* Add component-specific styles here if needed */
