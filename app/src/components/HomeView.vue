@@ -1,5 +1,4 @@
 <script>
-import Navbar from '@/components/Navbar.vue';
 import SearchBar from '@/components/SearchBar.vue';
 import UserProfile from '@/components/UserProfile.vue';
 import CardComponent from '@/components/CardComponent.vue';
@@ -9,7 +8,6 @@ export default {
   name: 'HomeView',
   components: {
     HeaderComponent,
-    Navbar,
     SearchBar,
     UserProfile,
     CardComponent
@@ -63,7 +61,8 @@ export default {
           deleted: null,
           imageSrc: 'https://via.placeholder.com/150'
         }
-      ]
+      ],
+      loggedIn: true
     };
   }
 };
@@ -75,7 +74,7 @@ export default {
       <strong>Current route path:</strong> {{ $route.fullPath }}
     </p>
     <header-component/>
-    <navbar></navbar>
+<!--    <navbar></navbar>-->
 
     <div class="row">
       <card-component
@@ -86,6 +85,19 @@ export default {
           :description="card.description"
       ></card-component>
     </div>
+
+    <div>
+      <div class="container justify-content-center text-center" v-if="loggedIn">
+        <span>
+        <img src='https://via.placeholder.com/150'/>
+        <p>Add new product</p>
+          <p> User is logged in:  {{loggedIn}}</p>
+      </span>
+
+      </div>
+
+    </div>
+
   </div>
 </template>
 

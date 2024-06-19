@@ -5,7 +5,7 @@ import HomeView from "@/components/HomeView.vue";
 
 const routes = [
     { path: '/', component: HomeView },
-    {path: '/user', component: Profile}
+    // {path: '/user', component: Profile}
 ]
 
 const router = createRouter({

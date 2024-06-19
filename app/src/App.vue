@@ -1,5 +1,4 @@
 <script>
-import Navbar from './components/Navbar.vue';
 import SearchBar from './components/SearchBar.vue';
 import UserProfile from './components/UserProfile.vue';
 import CardComponent from './components/CardComponent.vue';
@@ -9,7 +8,6 @@ export default {
   name: 'App',
   components: {
     HeaderComponent,
-    Navbar,
     SearchBar,
     UserProfile,
     CardComponent

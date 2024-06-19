@@ -1,11 +1,11 @@
 <script>
 export default {
   name: 'UserProfile',
-  methods:{
-    goToUserProfile() {
-      this.$router.push('/user')
-    },
-  }
+  // methods:{
+  //   goToUserProfile() {
+  //     this.$router.push('/user')
+  //   },
+  // }
 };
 </script>
 
@@ -14,7 +14,7 @@ export default {
   <div class="user-profile">
     <div class="container border p-1 align-center align-middle">
 
-      <div @click="goToUserProfile" class="user-profile-link borderless">
+      <div class="user-profile-link borderless">
         <div class="row">
           <div class="col">
             <img src="https://via.placeholder.com/50" alt="User Profile" class="user-profile-img">
