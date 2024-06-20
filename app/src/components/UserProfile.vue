@@ -1,28 +1,20 @@
 <script>
 export default {
   name: 'UserProfile',
-  // methods:{
-  //   goToUserProfile() {
-  //     this.$router.push('/user')
-  //   },
-  // }
+  props:[]
 };
 </script>
 
 
 <template>
   <div class="user-profile">
-    <div class="container border p-1 align-center align-middle">
-
+    <div class="container border p-1 align-center align-middle justify-content-center">
       <div class="user-profile-link borderless">
         <div class="row">
           <div class="col">
-            <img src="https://via.placeholder.com/50" alt="User Profile" class="user-profile-img">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <p class="text-center"> User Profile</p>
+            <p>Welcome</p>
+            <img src="/user.png" alt="User Profile" class="w-25">
+            <p>Sign in / Register</p>
           </div>
         </div>
       </div>

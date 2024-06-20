@@ -13,7 +13,7 @@ export default {
       <div class="row justify-content-between">
         <div class="col-1">
           <a href="#" class="d-flex align-items-center text-dark text-decoration-none">
-            <img src="https://via.placeholder.com/100x60" alt="Logo">
+            <img src="/logo.png" alt="Logo" class="w-100" />
           </a>
         </div>
         <div class="col-8">
@@ -23,31 +23,13 @@ export default {
           <user-profile></user-profile>
         </div>
         <div class="col-1 border text-center">
-            <img src="https://via.placeholder.com/100x60" alt="basket" class=".basket-profile-img">
+            <img src="/add-to-cart.png" alt="basket" class="w-25">
             <p>Basket</p>
         </div>
       </div>
-<!--      <div class="d-flex justify-content-between align-items-center py-3">-->
-<!--        <a href="#" class="d-flex align-items-center text-dark text-decoration-none">-->
-<!--          <img src="https://via.placeholder.com/100x60" alt="Logo">-->
-<!--        </a>-->
-<!--      </div>-->
     </div>
   </header>
 </template>
-
-<!--<template>-->
-
-
-<!--  <div class="d-flex justify-content-between align-items-center py-3 mb-4 lg-4 border-bottom">-->
-<!--    <a href="#" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">-->
-<!--      <img src="https://via.placeholder.com/100x60" alt="Logo">-->
-<!--    </a>-->
-<!--    <search-bar class="col-md-6"></search-bar>-->
-<!--    <user-profile class="col-md-3"></user-profile>-->
-<!--  </div>-->
-
-<!--</template>-->
 
 
 <style scoped>
