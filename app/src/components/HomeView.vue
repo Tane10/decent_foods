@@ -37,19 +37,6 @@ export default {
           :cost="card.cost"
       ></card-component>
     </div>
-
-<!--    <div>-->
-<!--      <div class="container justify-content-center text-center" v-if="loggedIn">-->
-<!--        <span>-->
-<!--        <img src='https://via.placeholder.com/150'/>-->
-<!--        <p>Add new product</p>-->
-<!--          <p> User is logged in:  {{loggedIn}}</p>-->
-<!--      </span>-->
-
-<!--      </div>-->
-
-<!--    </div>-->
-
   </div>
 </template>
 

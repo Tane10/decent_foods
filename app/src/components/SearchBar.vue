@@ -1,13 +1,20 @@
 <script>
 export default {
-  name: 'SearchBar'
+  name: 'SearchBar',
+  methods: {
+    searchProducts(product) {
+      alert(`searching for: ${product}`)
+      // if cards.title.includes(product) => return
+    }
+  }
+
 };
 </script>
 
 <template>
   <div class="input-group mb-3 ma">
-    <input type="text" class="form-control" placeholder="Search">
-    <button class="btn btn-primary">Search</button>
+    <input v-model="product" type="text" class="form-control" placeholder="Search">
+    <button @click="searchProducts(product)" class="btn btn-primary">Search</button>
   </div>
 </template>
 
