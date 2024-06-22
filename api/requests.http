@@ -1,0 +1,20 @@
+## Get all users ##
+GET http://127.0.0.1:8000/user
+Accept: application/json
+
+###
+## Create a user ##
+POST http://127.0.0.1:8000/user
+Content-Type: application/json
+
+{
+  "name": "",
+  "email": "",
+  "wallet_uuid": ""
+}
+###
+## Get user by id ##
+GET http://127.0.0.1:8000/user/2
+Accept: application/json
+
+###

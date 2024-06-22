@@ -1,4 +1,4 @@
-from models import Users
+from models import Products
 
 
 class ProductService:

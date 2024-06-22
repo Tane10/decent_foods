@@ -1,5 +1,6 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Query
 from services.users_service import UserService
+from models import UserRequestModel
 
 router = APIRouter()
 user_service = UserService()
@@ -11,8 +12,8 @@ def get_users():
 
 
 @router.post('/user')
-def create_user():
-    return user_service.create_user()
+def create_user(new_user: UserRequestModel):
+    return user_service.create_user(new_user)
 
 
 @router.get('/user/{user_id}')

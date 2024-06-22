@@ -7,6 +7,8 @@ from peewee import (
     BlobField
 )
 
+from pydantic import BaseModel
+
 db = SqliteDatabase('../data/dev_database.db')
 
 
@@ -20,6 +22,12 @@ class Users(Model):
     class Meta:
         database = db
         # table_name = users => can add table name into meta
+
+
+class UserRequestModel(BaseModel):
+    name: str
+    email: str
+    wallet_uuid: str
 
 
 class Transactions(Model):
@@ -42,9 +50,9 @@ class Products(Model):
     cost = IntegerField()
     sellers_uuid = CharField()
     description = CharField()
-    name = CharField()
+    title = CharField()
     deleted = IntegerField()
-    image = BlobField()
+    image_src = BlobField()
 
     class Meta:
         database = db
