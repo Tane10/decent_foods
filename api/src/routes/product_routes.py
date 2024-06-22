@@ -1,20 +1,20 @@
 from fastapi import APIRouter
-from services.users_service import UserService
+from services.products_service import ProductService
 
 router = APIRouter()
-user_service = UserService()
+product_service = ProductService()
 
 
-@router.get('/user')
+@router.get('/product')
 def get_users():
-    return user_service.get_users()
+    return product_service.get_users()
 
 
-@router.post('/user')
+@router.post('/product')
 def create_user():
-    return user_service.create_user()
+    return product_service.create_user()
 
 
-@router.get('/user/{user_id}')
+@router.get('/product/{product_id}')
 def get_user_by_id(user_id: str):
-    return user_service.get_user_by_id(user_id)
+    return product_service.get_user_by_id(user_id)

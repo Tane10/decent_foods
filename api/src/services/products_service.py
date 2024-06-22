@@ -1,7 +1,7 @@
 from models import Users
 
 
-class UserService:
+class ProductService:
 
     def get_users(self):
         users = Users.select()
